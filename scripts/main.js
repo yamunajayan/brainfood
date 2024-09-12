@@ -1,5 +1,5 @@
 import RecipeAPI from "./recipe-api.js";
-const API_KEY = "6007bbc449674cabbd9445cf4fb0d419";
+const API_KEY = "64142da9eea5464481435f2efc5e5101";
 
 const recepieApi = new RecipeAPI(API_KEY);
 
@@ -71,21 +71,6 @@ displayRecipes(recepieArray);
 
 const formEl = document.querySelector(".search");
 formEl.addEventListener("submit", handleSubmit);
-
-// document.addEventListener("DOMContentLoaded", () => {
-//   const observer = new MutationObserver(() => {
-//     const recipeImg = document.querySelectorAll(".recipe_img");
-//     console.log(recipeImg);
-//     recipeImg.forEach((recepie) => {
-//       recepie.addEventListener("click", async (event) => {
-//         event.preventDefault();
-//         console.log("I am here");
-//         console.log(event);
-//       });
-//     });
-//   });
-//   observer.observe(document.body, { childList: true, subtree: true });
-// });
 
 document.addEventListener("DOMContentLoaded", () => {
   const observer = new MutationObserver(() => {

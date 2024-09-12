@@ -1,3 +1,5 @@
+@use "./variables" as *;
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -9,4 +11,9 @@ a {
 
 html {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: $primary-color-dark-green;
+}
+
+body {
+  background-color: #e9efec;
 }
