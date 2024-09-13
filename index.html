@@ -10,16 +10,16 @@
     <header>
       <nav class="header">
         <a href="index.html" class="header__home-link">
-          <h1 class="header__home">BrainFood</h1>
+          <h3 class="header__home">BrainFood</h3>
         </a>
-        <ul class="header__nav">
+        <!-- <ul class="header__nav">
           <li class="header__list">
             <a href="#" class="header__link">Recipes</a>
           </li>
-        </ul>
+        </ul> -->
       </nav>
 
-      <form class="search">
+      <!-- <form class="search">
         <div>
           <input
             type="text"
@@ -59,17 +59,68 @@
             <option value="12">12</option>
           </select>
         </div>
-      </form>
+      </form> -->
     </header>
 
-    <main>
-      <div class="carousel"></div>
+    <main class="menu">
+      <section class="menu__box">
+        <h1 class="menu__title">Find your recipe !!!</h1>
+        <div class="menu__form-section">
+          <form class="search">
+            <div class="search__box">
+              <input
+                type="text"
+                name="ingredient"
+                class="search__input"
+                placeholder="Enter 3 ingredients..."
+              />
+            </div>
+            <div class="search__item">
+              <label for="cusines">Choose a cuisine:</label>
+              <select name="cuisine" id="cuisine">
+                <option value="Any">Any</option>
+                <option value="Indian">Indian</option>
+                <option value="Italian">Italian</option>
+                <option value="British">British</option>
+                <option value="Mexican">Mexican</option>
+                /
+                <option value="Chinese">Chinese</option>
+                <option value="Eastern European">Eastern European</option>
+                <option value="British">British</option>
+                <option value="Mexican">Mexican</option>
+              </select>
+            </div>
+            <div class="search__item">
+              <label for="number">Number of Recipes:</label>
+              <select name="number" id="number">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+              </select>
+            </div>
+            <button class="search__button" type="submit">Search</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="carousel">
+        <div class="scroll-indicator">⇆ Scroll</div>
+      </section>
     </main>
 
     <footer>
       <nav class="footer">
         <a href="index.html" class="footer__home-link">
-          <h1 class="footer__home">BrainFood</h1>
+          <h3 class="footer__home">BrainFood</h3>
         </a>
       </nav>
     </footer>

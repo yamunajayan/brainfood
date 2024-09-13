@@ -15,7 +15,7 @@ console.log(allRecipes);
 
 // allRecipes.forEach((item) => {
 //   const label = item.recipe.label;
-//   console.log(label);
+//   console.log(label); s
 // });
 
 // const recepieApi = new RecipeAPI(API_KEY);
@@ -25,19 +25,19 @@ const carouselEl = document.querySelector(".carousel");
 function displayRecipes(recipes) {
   carouselEl.innerHTML = "";
 
-  recipes.forEach((recipe) => {
-    console.log("I am here");
+  recipes.slice(0, 12).forEach((recipe) => {
     const recipeEl = document.createElement("div");
     recipeEl.classList.add("recipe");
 
     const titleEl = document.createElement("h3");
     titleEl.innerText = recipe.recipe.label;
+    titleEl.classList.add("recipe__title");
 
     const imgEl = document.createElement("img");
     imgEl.src = recipe.recipe.image;
     imgEl.alt = recipe.recipe.label;
     // imgEl.id = recipe.id;
-    imgEl.classList.add("recipe_img");
+    imgEl.classList.add("recipe__img");
 
     recipeEl.appendChild(titleEl);
     recipeEl.appendChild(imgEl);

@@ -10,12 +10,27 @@ a {
 }
 
 html {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: sans-serif;
   color: #16423c;
 }
 
 body {
   background-color: #e9efec;
+  background-color: white;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+@media screen and (min-width: 48rem) {
+  h1 {
+    font-size: 3rem;
+  }
+}
+@media screen and (min-width: 80rem) {
+  h1 {
+    font-size: 4rem;
+  }
 }
 
 a {
@@ -29,7 +44,7 @@ h3 {
 
 header {
   padding: 10px;
-  border-bottom: 2px solid #ffb84d;
+  border-bottom: 2px solid #294b29;
   display: flex;
 }
 
@@ -79,42 +94,63 @@ header {
 
 /* Search Bar */
 .search {
-  margin-top: 20px;
+  width: 80%;
+  margin-top: 1rem;
   display: flex;
   flex-direction: column;
 }
 .search__input {
-  padding: 10px;
+  padding: 1rem;
   font-size: 1rem;
-  width: 300px;
-  border: 1px solid #ffb84d;
-  border-radius: 4px 0 0 4px;
+  width: 100%;
+  border: 0.125rem solid #294b29;
+  border-radius: 0.5rem;
 }
 .search__button {
+  margin-top: 1rem;
   padding: 10px;
   font-size: 1rem;
-  border: 1px solid #ff6600;
+  border: 0.125rem solid #294b29;
   border-left: none;
-  background-color: #ff6600;
+  background-color: #294b29;
   color: white;
-  border-radius: 0 4px 4px 0;
+  border-radius: 0.5rem;
   cursor: pointer;
 }
 .search__button__:hover {
   background-color: #16423c;
 }
+.search__item {
+  padding-top: 1rem;
+}
+
+.menu {
+  padding: 1rem;
+}
+.menu__form-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1rem 0;
+  align-items: center;
+  /* padding: 1rem; */
+}
+.menu__title {
+  padding-top: 1.5rem;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em; /* Adjust as needed */
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
 
 .carousel {
-  flex-direction: column;
+  border-top: 0.125rem solid #16423c;
+  padding: 4.5rem 0;
   display: flex;
+  overflow-x: scroll;
   align-items: center;
-}
-@media screen and (min-width: 48rem) {
-  .carousel {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
 }
 
 footer {
@@ -127,14 +163,60 @@ footer {
   color: #16423c;
 }
 
-.recipe_img {
+.recipe__img {
   height: 20rem;
-  width: 25rem;
+  border-radius: 2rem;
 }
 
 .recipe {
   display: flex;
   align-items: center;
   flex-direction: column;
+  padding: 0.3rem;
+  border: 0.3rem solid #16423c;
+  border-radius: 2rem;
+  margin-right: 1rem;
+  width: 20rem;
+  position: relative;
+}
+@media screen and (min-width: 48rem) {
+  .recipe {
+    width: 50rem;
+  }
+}
+.recipe:hover {
+  transform: scale(1.1);
+  margin: 0 4rem;
+}
+@media screen and (min-width: 48rem) {
+  .recipe:hover {
+    transform: scale(1.3);
+  }
+}
+.recipe__title {
+  position: absolute;
+  bottom: 2rem;
+  color: white;
   padding: 1rem;
+  background-color: rgba(22, 66, 60, 0.337254902);
+  border-radius: 1rem;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
 }/*# sourceMappingURL=main.css.map */
