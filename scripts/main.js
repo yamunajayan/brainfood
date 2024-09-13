@@ -1,7 +1,24 @@
-import RecipeAPI from "./recipe-api.js";
-const API_KEY = "64142da9eea5464481435f2efc5e5101";
+// import RecipeAPI from "./recipe-api.js";
+import FoodRecipeApi from "./edamam-recipe-api.js";
+// const API_KEY = "64142da9eea5464481435f2efc5e5101";
 
-const recepieApi = new RecipeAPI(API_KEY);
+const appId = "64404aa8";
+const appKey = "68b3dbdb939122e0bcb55fe18ab3fc5e";
+const foodRecipe1 = new FoodRecipeApi(appKey, appId);
+const item = "salmon";
+const recipie = await foodRecipe1.getRecepie(item);
+
+const allRecipes = recipie.hits;
+
+console.log(recipie);
+console.log(allRecipes);
+
+// allRecipes.forEach((item) => {
+//   const label = item.recipe.label;
+//   console.log(label);
+// });
+
+// const recepieApi = new RecipeAPI(API_KEY);
 
 const carouselEl = document.querySelector(".carousel");
 
@@ -9,16 +26,17 @@ function displayRecipes(recipes) {
   carouselEl.innerHTML = "";
 
   recipes.forEach((recipe) => {
+    console.log("I am here");
     const recipeEl = document.createElement("div");
     recipeEl.classList.add("recipe");
 
     const titleEl = document.createElement("h3");
-    titleEl.innerText = recipe.title;
+    titleEl.innerText = recipe.recipe.label;
 
     const imgEl = document.createElement("img");
-    imgEl.src = recipe.image;
-    imgEl.alt = recipe.title;
-    imgEl.id = recipe.id;
+    imgEl.src = recipe.recipe.image;
+    imgEl.alt = recipe.recipe.label;
+    // imgEl.id = recipe.id;
     imgEl.classList.add("recipe_img");
 
     recipeEl.appendChild(titleEl);
@@ -62,12 +80,12 @@ async function handleSubmit(event) {
   formEl.reset();
 }
 
-const recepies = await recepieApi.getRecipes();
+// const recepies = await recepieApi.getRecipes();
 // console.log(recepies.results);
 
-const recepieArray = recepies.results;
+// const recepieArray = recepies.results;
 // console.log(recepieArray);
-displayRecipes(recepieArray);
+// displayRecipes(recepieArray);
 
 const formEl = document.querySelector(".search");
 formEl.addEventListener("submit", handleSubmit);
@@ -92,3 +110,5 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   observer.observe(document.body, { childList: true, subtree: true });
 });
+
+displayRecipes(allRecipes);

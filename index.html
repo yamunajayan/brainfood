@@ -1,77 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BrainFood</title>
-    <link rel="stylesheet" href="./styles/main.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="./styles/main.css" />
+  </head>
+  <body>
     <header>
-        <nav class="header">
-            <a href="index.html" class="header__home-link">
-                <h1 class="header__home">BrainFood</h1>
-            </a>
-            <ul class="header__nav">
-                <li class="header__list">
-                    <a href="#" class="header__link">Recipes</a>
-                </li>  
-            </ul>
-        </nav>
-        
-        <form class="search">
-            <div>
-                <input type="text" name="ingredient" class="search__input" placeholder="Enter 3 ingredients...">
-                <button class="search__button" type="submit">Search</button>
-            </div>
-            <div>
-            <label for="cusines">Choose a cuisine:</label>
-            <select name="cuisine" id="cuisine">
-                <option value="Any">Any</option>
-                <option value="Indian">Indian</option>
-                <option value="Italian">Italian</option>
-                <option value="British">British</option>
-                <option value="Mexican">Mexican</option> /
-                <option value="Chinese">Chinese</option>
-                <option value="Eastern European">Eastern European</option>
-                <option value="British">British</option>
-                <option value="Mexican">Mexican</option>
-            </select>
-            <label for="number">Number of Recipes:</label>
-            <select name="number" id="number">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-                <option value="11">11</option>
-                <option value="12">12</option>
-            </select>
-           </div>
-        </form>
+      <nav class="header">
+        <a href="index.html" class="header__home-link">
+          <h1 class="header__home">BrainFood</h1>
+        </a>
+        <ul class="header__nav">
+          <li class="header__list">
+            <a href="#" class="header__link">Recipes</a>
+          </li>
+        </ul>
+      </nav>
+
+      <form class="search">
+        <div>
+          <input
+            type="text"
+            name="ingredient"
+            class="search__input"
+            placeholder="Enter 3 ingredients..."
+          />
+          <button class="search__button" type="submit">Search</button>
+        </div>
+        <div>
+          <label for="cusines">Choose a cuisine:</label>
+          <select name="cuisine" id="cuisine">
+            <option value="Any">Any</option>
+            <option value="Indian">Indian</option>
+            <option value="Italian">Italian</option>
+            <option value="British">British</option>
+            <option value="Mexican">Mexican</option>
+            /
+            <option value="Chinese">Chinese</option>
+            <option value="Eastern European">Eastern European</option>
+            <option value="British">British</option>
+            <option value="Mexican">Mexican</option>
+          </select>
+          <label for="number">Number of Recipes:</label>
+          <select name="number" id="number">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+          </select>
+        </div>
+      </form>
     </header>
 
     <main>
-        <div class="carousel"></div>
+      <div class="carousel"></div>
     </main>
 
     <footer>
-        <nav class="footer">
-            <a href="index.html" class="footer__home-link">
-                <h1 class="footer__home">BrainFood</h1>
-            </a>
-           
-        </nav>
+      <nav class="footer">
+        <a href="index.html" class="footer__home-link">
+          <h1 class="footer__home">BrainFood</h1>
+        </a>
+      </nav>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
-    <script  type="module" src="./scripts/recipe-api.js"></script>
-    <script type="module" src="./scripts/main.js"></scripts>
-</body>
+    <!-- <script type="module" src="./scripts/recipe-api.js"></script> -->
+    <script type="module" src="./scripts/edamam-recipe-api.js"></script>
+    <script type="module" src="./scripts/main.js"></script>
+  </body>
 </html>
