@@ -8,6 +8,11 @@
 a {
   text-decoration: none;
 }
+button{
+  padding: 0;
+  margin: 0;
+  text-transform: uppercase;
+}
 
 html {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -16,4 +21,18 @@ html {
 
 body {
   background-color: #e9efec;
+}
+select{
+  background-color: $medium-green;
+  border: none;
+  border-radius: 4px;
+  color:white;
+ &:hover{
+  background-color: $primary-color-dark-green;
+ }
+ 
+}
+
+label{
+  color:$medium-green;
 }

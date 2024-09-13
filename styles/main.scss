@@ -4,7 +4,6 @@
 @use "./_partials/mixins" as *;
 
 a {
-  color: yellow;
   text-decoration: none;
 }
 
@@ -78,6 +77,8 @@ header {
 .search {
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
+  align-items: end;
   &__input{
    
   }
@@ -91,17 +92,20 @@ header {
   }
 
   &__button {
+    max-width: 10rem;
     padding: 10px;
     font-size: 1rem;
     border: 1px solid $medium-green;
     border-left: none;
-    background-color: $primary-color-dark-green;
+    background-color: $medium-green;
     color: white;
     border-radius: 4px;
     margin-top: 1.3rem;
+    justify-self: flex-end;
     cursor: pointer;
-    &__:hover {
+    &:hover {
       background-color: $primary-color-dark-green;
+      transition: all .2s ease-in-out;
     }
   }
 }
