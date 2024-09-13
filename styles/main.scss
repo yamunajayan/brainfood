@@ -11,12 +11,17 @@ a {
 h3 {
   color: $primary-color-dark-green;
 }
+input{
+  margin: 0;
+  padding: 0;
+}
 
 header {
-  padding: 10px;
-  //   background-color: inherit;
-  border-bottom: 2px solid #ffb84d;
+  padding: 10px 8rem;
+  border-bottom: 2px solid $medium-green;
   display: flex;
+  justify-content: space-between;
+
 }
 
 .header {
@@ -54,7 +59,7 @@ header {
     display: flex;
     align-items: center;
     margin-top: 20px;
-    &__--image {
+    &--image {
       width: 50px;
       height: 50px;
       border-radius: 50%;
@@ -71,25 +76,29 @@ header {
 
 /* Search Bar */
 .search {
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
-  &__input {
-    padding: 10px;
+  &__input{
+   
+  }
+  &__input-field {
+    padding: 0.5rem;
     font-size: 1rem;
-    width: 300px;
-    border: 1px solid #ffb84d;
-    border-radius: 4px 0 0 4px;
+    width: 100%;
+    border: 1px solid $medium-green;
+    border-radius: 4px;
+    margin-bottom: 1rem;
   }
 
   &__button {
     padding: 10px;
     font-size: 1rem;
-    border: 1px solid #ff6600;
+    border: 1px solid $medium-green;
     border-left: none;
-    background-color: #ff6600;
+    background-color: $primary-color-dark-green;
     color: white;
-    border-radius: 0 4px 4px 0;
+    border-radius: 4px;
+    margin-top: 1.3rem;
     cursor: pointer;
     &__:hover {
       background-color: $primary-color-dark-green;
@@ -125,6 +134,7 @@ footer {
 .recipe_img {
   height: 20rem;
   width: 25rem;
+  border-radius: 4px;
 }
 
 .recipe {

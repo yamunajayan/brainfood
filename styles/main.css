@@ -27,10 +27,16 @@ h3 {
   color: #16423c;
 }
 
+input {
+  margin: 0;
+  padding: 0;
+}
+
 header {
-  padding: 10px;
-  border-bottom: 2px solid #ffb84d;
+  padding: 10px 8rem;
+  border-bottom: 2px solid #5da49a;
   display: flex;
+  justify-content: space-between;
 }
 
 .header {
@@ -65,7 +71,7 @@ header {
   align-items: center;
   margin-top: 20px;
 }
-.header__profile__--image {
+.header__profile--image {
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -79,25 +85,26 @@ header {
 
 /* Search Bar */
 .search {
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
 }
-.search__input {
-  padding: 10px;
+.search__input-field {
+  padding: 0.5rem;
   font-size: 1rem;
-  width: 300px;
-  border: 1px solid #ffb84d;
-  border-radius: 4px 0 0 4px;
+  width: 100%;
+  border: 1px solid #5da49a;
+  border-radius: 4px;
+  margin-bottom: 1rem;
 }
 .search__button {
   padding: 10px;
   font-size: 1rem;
-  border: 1px solid #ff6600;
+  border: 1px solid #5da49a;
   border-left: none;
-  background-color: #ff6600;
+  background-color: #16423c;
   color: white;
-  border-radius: 0 4px 4px 0;
+  border-radius: 4px;
+  margin-top: 1.3rem;
   cursor: pointer;
 }
 .search__button__:hover {
@@ -130,6 +137,7 @@ footer {
 .recipe_img {
   height: 20rem;
   width: 25rem;
+  border-radius: 4px;
 }
 
 .recipe {
